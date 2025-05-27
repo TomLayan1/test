@@ -8,7 +8,9 @@ const config: Config = {
     "^.+\\.tsx?$": "ts-jest"
   },
   moduleNameMapper: {
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/test/mocks/fileMock.js',
+    // Mocks CSS module imports by returning the class name as a string
+    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/src/test/mocks/fileMock.js',
   }
 }
 
