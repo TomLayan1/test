@@ -1,8 +1,6 @@
-type PropType = {
-  username?: string
-}
+import type { UsernamePropType } from "./types"
 
-const Username = (props: PropType) => {
+const Username = (props: UsernamePropType) => {
 
   return (
     <>
